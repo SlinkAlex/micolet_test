@@ -1,0 +1,17 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.form-control:focus{
+    border: solid;
+    border-color: rgba(119, 210, 164, 1);
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
+#suscribeme{
+    background-color:  rgba(119, 210, 164, 1);
+    border: none;
+}
+
+.centrado{
+    margin-left: 32.5%;
+}

@@ -1,0 +1,48 @@
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+
+
+        <h1 class="text-center" style="margin-top:20%;font-size:60px;font-family: 'Trebuchet MS', sans-serif;">MICOLET'</h1>
+        <p class="text-center" >Moda casi nueva con garantía</p>
+        <br>
+        <strong>
+        <p class="text-center"style=";font-size:18px;color:#565656">¡Bienvenid@! Próximamente abriremos<br> nuestra web en este país.</p>
+        <p class="text-center"style="margin-top:2%;font-size:15px;color:#565656">Suscribete para recibir nuestras novedades</p>
+        </strong>
+
+        <% if @user.errors.any? %>
+            <div class="alert alert-danger text-center" role="alert">
+                <p><%= @user.errors.full_messages.first %></p>
+            </div>
+        <% end %>
+
+        <% flash.each do |name, msg| %>
+            <div class="alert alert-success text-center" role="alert">
+                <p><%= msg %></p>
+            </div>
+        <% end %>
+
+        <%= form_for @user do |f| %>
+            <div class="form-group">
+                <%= f.label :email, style: "margin-left:30%;font-size:13.5px;color:#5a6880" %>
+                <%= f.text_field :email, class: "form-control center-block", style: "width:40%;" %>
+            </div>
+            <label style="margin-left:30%;font-size:13.5px;color:#5a6880">Preferencias</label>
+
+            <div class="checkbox centrado" >
+                <%= f.check_box :m_female %>
+                <%= f.label "Moda Mujer" %>
+            </div>
+            <div class="checkbox centrado">
+                <%= f.check_box :m_male %>
+                <%= f.label "Moda Hombre" %>
+            </div>
+            <div class="checkbox centrado">
+                <%= f.check_box :m_kids %>
+                <%= f.label "Moda Infantil" %>
+            </div>
+            
+            <%= f.submit "¡Suscribeme!", class:"btn btn-primary btn-lg btn-blockt", style: "margin-left:41%;" %>
+        <% end %>
+    </div>
+</div>
