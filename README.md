@@ -26,3 +26,6 @@ Things you may want to cover:
 * run bundle install 
 * run "rails db:migrate"
 * run "rails server"
+
+
+test de push credentials
